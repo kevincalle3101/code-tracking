@@ -1,0 +1,29 @@
+# Perfil de Producción
+NODE_ENV: production
+
+# PostgreSQL
+db:
+  host: mi-instancia-rds.us-east-1.rds.amazonaws.com
+  port: 5432
+  username: prod_user
+  password: "UNA_CONTRASEÑA_SEGURA_DE_SECRETS_MANAGER"
+  database: prod_db
+
+# AWS
+# En producción, es mejor usar roles de IAM en lugar de claves.
+# Dejar estas variables vacías si se usa un rol de instancia EC2/ECS.
+aws:
+  region: us-east-1
+  accessKeyId: ""
+  secretAccessKey: ""
+
+# Redis/ElastiCache
+redis:
+  host: mi-cluster-elasticache.amazonaws.com
+  port: 6379
+  ttl: 900  # 15 minutes in seconds
+
+# Cognito
+cognito:
+  userPoolId: "us-east-1_XXXXXXXXX"  # Replace with your User Pool ID
+  region: "us-east-1"
