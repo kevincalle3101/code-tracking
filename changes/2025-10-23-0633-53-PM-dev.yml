@@ -1,0 +1,30 @@
+# Perfil de Desarrollo
+NODE_ENV: dev
+
+# PostgreSQL
+db:
+  host: localhost
+  port: 5432
+  username: postgres
+  password: "mysecretpassword"
+  database: dev_db
+
+# AWS
+aws:
+  region: us-east-1
+  accessKeyId: "TU_ACCESS_KEY_DEV"
+  secretAccessKey: "TU_SECRET_KEY_DEV"
+
+# Redis/ElastiCache
+redis:
+  host: localhost
+  port: 6379
+  ttl: 900
+
+# Cognito
+cognito:
+  userPoolId: "us-east-2_UuaHG74Sg"
+  region: "us-east-2"
+
+# Puerto de la aplicación
+PORT: 3000
