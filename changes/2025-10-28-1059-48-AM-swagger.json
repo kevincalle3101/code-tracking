@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/permission": {
+      "get": {
+        "operationId": "PermissionController_getUserPermission",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Permisos obtenidos para el usuario autenticado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserPermissionResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Obtener permisos del usuario autenticado",
+        "tags": [
+          "Permissions"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "AuthService API",
+    "description": "Documentación de la API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http",
+        "name": "JWT",
+        "description": "Ingrese el token JWT de AWS Cognito",
+        "in": "header"
+      }
+    },
+... (truncated for brevity)
