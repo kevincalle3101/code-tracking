@@ -1,0 +1,28 @@
+app:
+  env: local
+  port: 3000
+
+# PostgreSQL
+db:
+  host: localhost
+  port: 55432
+  database: auth_service
+  user: postgres
+  password: local_password
+
+# AWS
+aws:
+  region: us-east-2
+  accessKeyId: ""
+  secretAccessKey: ""
+
+# Redis/ElastiCache
+redis:
+  host: localhost
+  port: 6379
+  ttl: 604800
+  
+# Cognito
+cognito:
+  userPoolId: "us-east-2_UuaHG74Sg"
+  region: "us-east-2"

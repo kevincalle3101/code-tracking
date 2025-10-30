@@ -1,0 +1,27 @@
+app:
+  env: dev
+  port: 3000
+
+# PostgreSQL
+db:
+  host: db-auth-service-example-dev.us-east-2.rds.amazonaws.com
+  port: 5432
+  database: auth_service
+  secretName: rds!cluster-auth-service-dev
+
+# AWS
+aws:
+  region: us-east-2
+  accessKeyId: ""
+  secretAccessKey: ""
+
+# Redis/ElastiCache
+redis:
+  host: mi-cluster-elasticache.amazonaws.com
+  port: 6379
+  ttl: 604800
+
+# Cognito
+cognito:
+  userPoolId: "user-pool-id-dev"
+  region: "region-aws-dev"
