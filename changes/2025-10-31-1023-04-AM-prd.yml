@@ -1,0 +1,15 @@
+app:
+  env: prd
+  port: 3000
+
+db:
+  host: mi-instancia-rds.us-east-1.rds.amazonaws.com
+  port: 5432
+  username: prod_user
+  password: "UNA_CONTRASEÑA_SEGURA_DE_SECRETS_MANAGER"
+  database: prod_db
+
+aws:
+  region: us-east-1
+  accessKeyId: ""
+  secretAccessKey: ""

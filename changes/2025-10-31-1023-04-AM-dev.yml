@@ -1,0 +1,14 @@
+app:
+  env: dev
+  port: 3000
+
+db:
+  host: db-media-clip.cluster-c7i8s2qmmxk2.us-east-2.rds.amazonaws.com
+  port: 5432
+  database: media_clip
+  secretName: rds!cluster-36608cbb-e871-408e-8db3-d3559853372e
+
+aws:
+  region: us-east-2
+  accessKeyId: ""
+  secretAccessKey: ""
