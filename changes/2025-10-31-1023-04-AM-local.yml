@@ -1,0 +1,15 @@
+app:
+  env: local
+  port: 3000
+
+db:
+  host: localhost
+  port: 55432
+  database: media_clip
+  user: postgres
+  password: local_password
+
+aws:
+  region: us-east-2
+  accessKeyId: ""
+  secretAccessKey: ""
