@@ -1,0 +1,28 @@
+app:
+  env: dev
+  port: 3000
+
+# PostgreSQL
+db:
+  host: auth-service-dev.c7i8s2qmmxk2.us-east-2.rds.amazonaws.com
+  port: 5432
+  database: auth_service
+  user: postgres
+  password: [YOUR_PASSWORD_HERE]  # Replace with actual password
+
+# AWS
+aws:
+  region: us-east-2
+  accessKeyId: ""
+  secretAccessKey: ""
+
+# Redis/ElastiCache
+redis:
+  host: localhost
+  port: 6379
+  ttl: 900
+
+# Cognito
+cognito:
+  userPoolId: "us-east-2_UuaHG74Sg"
+  region: "us-east-2"
