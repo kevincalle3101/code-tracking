@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/auth/permission": {
+      "get": {
+        "operationId": "PermissionController_getUserPermission",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Permisos obtenidos para el usuario autenticado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Obtener permisos del usuario autenticado",
+        "tags": [
+          "Permissions"
+        ]
+      }
+    },
+    "/auth/health": {
+      "get": {
+        "operationId": "HealthController_healthCheck",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Health"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "AuthService API",
+    "description": "Documentación de la API",
+    "version": "1.0",
+    "contact": {}
+... (truncated for brevity)
