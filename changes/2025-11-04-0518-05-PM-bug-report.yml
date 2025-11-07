@@ -1,0 +1,51 @@
+name: 'Bug report'
+title: "[Bug]: "
+labels: ["bug", "triage"]
+description: Report a reproducible bug or regression
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue!
+
+        This issue tracker is for reporting reproducible bugs or regression's found in this package, if you have a question or feature request, please report it within the [Discussions tab](https://github.com/bbc/sqs-producer/discussions) instead.
+
+        Before submitting a new bug/issue, please check the links below to see if there is a solution or question posted there already:
+
+         - [Discussions](https://github.com/bbc/sqs-producer/discussions)
+         - [Open Issues](https://github.com/bbc/sqs-producer/issues?q=is%3Aopen+is%3Aissue)
+         - [Closed Issues](https://github.com/bbc/sqs-producer/issues?q=is%3Aissue+is%3Aclosed)
+
+        The more information you fill in, the better the community can help you.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: Provide a clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Your minimal, reproducible example
+      description: |
+        Please add a link to a minimal reproduction.
+        Note:
+        - Please keep your example as simple and reproduceable as possible, try leaving out dependencies that are not required for reproduction.
+        - To create a shareable code example for web, you can use CodeSandbox (https://codesandbox.io/s/new) or Stackblitz (https://stackblitz.com/).
+        - Please make sure the example is complete and runnable - e.g. avoid localhost URLs.
+      placeholder: |
+        e.g. Code Sandbox, Stackblitz, Expo Snack or TypeScript playground
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe the steps we have to take to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+... (truncated for brevity)
