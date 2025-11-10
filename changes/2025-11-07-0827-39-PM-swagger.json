@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/clip/upload-start": {
+      "post": {
+        "operationId": "ClipController_startUpload",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartUploadIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ResponseDto"
+                    },
+                    {
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/StartUploadOut"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "summary": "Genera url presign S3 y crear el clip",
+        "tags": [
+          "Clip"
+        ]
+      }
+    },
+    "/clip/upload-end/{clipId}": {
+      "post": {
+        "operationId": "ClipController_endUpload",
+        "parameters": [
+... (truncated for brevity)
