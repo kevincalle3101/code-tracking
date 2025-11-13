@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/clip/tag/all": {
+      "get": {
+        "operationId": "TagController_getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Tag"
+        ]
+      }
+    },
+    "/clip": {
+      "post": {
+        "operationId": "ClipController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClipDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ResponseDto"
+                    },
+                    {
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/ClipDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+... (truncated for brevity)
